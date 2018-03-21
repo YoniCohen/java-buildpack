@@ -74,7 +74,7 @@ module JavaBuildpack
       private_constant :LINK_LOCAL
 
       def disable_dns_caching
-        puts '       JVM DNS caching disabled in lieu of BOSH DNS caching'
+        puts '       Yoni yoni yoni yoni'
 
         @droplet.networking.networkaddress_cache_ttl          = 0
         @droplet.networking.networkaddress_cache_negative_ttl = 0
