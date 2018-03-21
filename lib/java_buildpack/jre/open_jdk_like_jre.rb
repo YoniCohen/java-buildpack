@@ -54,10 +54,12 @@ module JavaBuildpack
         @droplet.copy_resources
         disable_dns_caching if link_local_dns?
 
-        return false
+        raise "yoni"
+        return if @droplet.java_home.java_8_or_later?
 
         warn "\n       WARNING: You are using #{@droplet.java_home.version}. Oracle has ended public updates of Java " \
              "1.7 as of April 2015, possibly rendering your application vulnerable.\n\n"
+
       end
 
       # (see JavaBuildpack::Component::BaseComponent#release)
