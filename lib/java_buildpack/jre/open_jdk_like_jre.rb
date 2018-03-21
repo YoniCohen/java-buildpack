@@ -50,6 +50,7 @@ module JavaBuildpack
 
       # (see JavaBuildpack::Component::BaseComponent#compile)
       def compile
+        puts '       Yoni yoni yoni yoni'
         download_tar
         @droplet.copy_resources
         disable_dns_caching if link_local_dns?
