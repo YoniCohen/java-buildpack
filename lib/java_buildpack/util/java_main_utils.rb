@@ -36,6 +36,7 @@ module JavaBuildpack
         # @param [Hash] configuration the Java main configuration or +nil+ if this is not provided
         # @return [String, nil] the Java main class name or +nil+ if there is no Java main class name
         def main_class(application, configuration = nil)
+          puts "TEST JAVA MAIN UTILS"
           config = configuration || JavaBuildpack::Util::ConfigurationUtils.load('java_main')
           config[MAIN_CLASS_PROPERTY] || manifest(application)[MANIFEST_PROPERTY]
         end
